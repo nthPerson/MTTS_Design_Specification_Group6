@@ -1,0 +1,43 @@
+Payment Gateway API: 
+
+Description of Operations: this module is to integrate the system with any merchant such as Visa, master card, American Express, etc.  This method is used to initiate a payment transaction with the payment gateway. 
+
+Create two Booleans, ProcessPayment and RefundPayment. 
+
+Parameters: 
+
+cardNumber (string): The card number associated with the user's payment method. 
+
+cardHolderName (string): The name of the cardholder as it appears on the payment card. 
+
+expirationDate (DateTime): The expiration date of the payment card. 
+
+cvv (string): The Card Verification Value, typically a security code on the back of the card. 
+
+amount (float): The amount of money to be charged or authorized for the payment transaction. 
+
+ 
+
+Return Value: 
+
+bool: The method returns a Boolean value (true or false) to indicate whether the payment processing was successful (true) or not (false). 
+
+ 
+
+RefundPayment Method: 
+
+Purpose: This method is used to initiate a refund transaction with the payment gateway.  It is responsible for processing a refund for a previous payment transaction, using the transaction ID and the refund amount. 
+
+ 
+
+Parameters: 
+
+transactionID (string): A unique identifier or reference associated with the original payment transaction that needs to be refunded. 
+
+amount (float): The amount of money to be refunded. 
+
+ 
+
+Return Value: 
+
+bool: The method returns a Boolean value (true or false) to indicate whether the refund processing was successful (true) or not (false).
